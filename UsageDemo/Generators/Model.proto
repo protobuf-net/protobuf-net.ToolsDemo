@@ -1,0 +1,12 @@
+﻿syntax = "proto3";
+option csharp_namespace = "MyModelHere";
+
+message Foo {
+    int32 a = 1;
+    string b = 2;
+    repeated Bar c = 3;
+}
+
+message Bar {
+    string name = 1;
+}

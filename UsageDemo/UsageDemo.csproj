@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <ProtoBufNet_Debug>True</ProtoBufNet_Debug>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Generators\Model.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="Generators\Model.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="protobuf-net" Version="3.0.73" />
+    <PackageReference Include="protobuf-net.BuildTools" Version="3.0.76" PrivateAssets="all" IncludeAssets="runtime;build;native;contentfiles;analyzers;buildtransitive" />
+  </ItemGroup>
+
+</Project>
