@@ -5,8 +5,16 @@ message Foo {
     int32 a = 1;
     string b = 2;
     repeated Bar c = 3;
+    // tip: try adding a syntax error (note there may be an off-by-one currently)
+
+    // asd = 4;
 }
 
 message Bar {
     string name = 1;
+}
+
+service SomeService
+{
+    rpc DoTheThing(Foo) returns (Foo);
 }
